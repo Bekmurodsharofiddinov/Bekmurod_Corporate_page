@@ -1,24 +1,35 @@
-import "./App.css";
-import Navigation from "./components/Navigation/Navigation";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home/Home";
-import About from "./components/pages/About/About";
-import Services from "./components/pages/Services/Services";
-import Contact from "./components/pages/Contact/Contact";
+import React from 'react';
+import Navbar from "./Page/Navbar"
+import Home from './Page/Home'
+import CardText from './Page/CardText'
+import Header from './Page/Header'
+import ImageText from './Page/ImageText'
+// import ImagePage from './Page/ImagePage'
+// import CardImgText from './Page/CardImgText'
+// import IconImages from './Page/IconImages'
+// import MapInput from "./Page/MapInput"
+// import Footer from './Page/Footer'
+// import NumberPage from './Page/NumberPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navigation></Navigation>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/services" element={<Services />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+    <>
+      <Navbar />
+      <Home />
+      <Header />
+      <CardText />
+      <ImageText />
+      {/*
+      <ImagePage />
+      <NumberPage/>
+      <CardImgText/>
+      <IconImages/>
+      <MapInput />
+      <Footer /> 
+      */}
 
-export default App;
+    </>
+  )
+};
+
+export default App
